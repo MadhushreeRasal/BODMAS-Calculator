@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	</head>
+	<body>
+		<header>
+			<h1 class="text-center text-2xl font-bold tracking-widest">THE BODMAS CALCULATOR</h1>
+		</header>
+		<main>
+			<section class="bg-[url(https://images.unsplash.com/photo-1711062717294-8902df8cebe3?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2tib2FyZHxlbnwwfHwwfHx8MA%3D%3D)] bg-cover bg-center p-15 lg:flex md:flex">
+				<div>
+				<p class="lg:mr-40 my-8 lg:text-7xl text-4xl text-white font-bold text-left">You Bring the numbers. We'll handle the stress.</p>
+				<p class="lg:me-30 my-8 mb-15 text-red-200 lg:text-4xl text-2xl font-bold text-left">Making math a little less intimidating. <br><span class="text-blue-200">Your little escape from calculation chaos.</span></p>
+				</div>
+			<div class="lg:pe-10 md:pe-10 flex justify-center items-center">
+				<form class="shadow-xl shadow-white align-center">
+				<input id="display" type="text" />
+				<!--<button type="reset">AC</button>-->
+				
+				<section class="flex justify-between">
+					<button value="reset" class="clear">AC</button>
+					<button type="button" onclick="result('<')" class="clear"><i class="ri-delete-back-2-fill"></i></button>
+				</section>
+				<section id="calculator">
+					<button type="button" onclick="result('1')"> 1</button>
+					<button type="button" onclick="result('2')"> 2</button>
+					<button type="button" onclick="result('3')"> 3</button>
+					<button type="button"class="operator"  onclick="result('+')"> + </button>
+					<button type="button" onclick="result('4')"> 4</button>
+					<button type="button" onclick="result('5')"> 5</button>
+					<button type="button" onclick="result('6')"> 6</button>
+					<button type="button" class="operator" onclick="result('-')"> -</button>
+					<button type="button" onclick="result('7')"> 7</button>
+					<button type="button" onclick="result('8')"> 8</button>
+					<button type="button" onclick="result('9')"> 9</button>
+					<button type="button" class="operator" onclick="result('*')"> x </button>
+					<button type="button" onclick="result('.')"> . </button>
+					<button type="button" onclick="result('0')"> 0</button>
+					<button type="button" class="operator" onclick="result('/')"> / </button>
+					
+					<button type="button" class="operator" onclick="result('=')"> = </button>
+				</section>
+				<!-- <section class="flex"> -->
+					<!-- <button value="reset" class="clear">AC</button> -->
+					<!-- <button onclick="result('<')" class="clear"><i class="ri-delete-back-2-fill"></i></button> -->
+				<!-- </section> -->
+				</form>
+				</div>
+			</section>
+			<section class="p-5 bg-mauve-50 text-center">
+				<h2 class="text-4xl text-center mt-8">What is BODMAS?</h2>
+				<p class="my-4">BODMAS stands for Brackets, Orders, Division, Multiplication, Addition and Subtraction. It tells us the order in which mathematical operations should be performed to solve an expression correctly.</p>
+				<section class="flex my-4 flex-wrap justify-center-safe">
+					<div class="text-center bg-blue-200 rounded-lg px-10 py-3 m-3">
+						<p class="text-3xl">B</p>
+						<span>BRACKETS</span>
+					</div>
+					<div class="text-center bg-blue-200 rounded-lg px-10 py-3 m-3">
+						<p class="text-3xl">O</p>
+						<span>ORDERS</span>
+					</div>
+					<div class="text-center bg-blue-200 rounded-lg px-10 py-3 m-3">
+						<p class="text-3xl">D</p>
+						<span>DIVISIONS</span>
+					</div>
+					<div class="text-center bg-blue-200 rounded-lg px-10 py-3 m-3">
+						<p class="text-3xl">M</p>
+						<span>MULTIPLICATIONS</span>
+					</div>
+					<div class="text-center bg-blue-200 rounded-lg px-10 py-3 m-3">
+						<p class="text-3xl">A</p>
+						<span>ADDITIONS</span>
+					</div>
+					<div class="text-center bg-blue-200 rounded-lg px-10 py-3 m-3">
+						<p class="text-3xl">S</p>
+						<span>SUBSTRACTIONS</span>
+					</div>
+				</section>
+				<p class="my-5 text-blue-900 font-bold">This is a simplified BODMAS calculator designed to handle basic arithmetic expressions involving addition, subtraction, multiplication and division. Enter your expression, press =, and let the calculator handle the order of operations for you!</p>
+			</section>
+			<script src="index.js"></script>
+		</main>
+		<footer class="text-center">
+			<a href="#"><i>Explore our other services -></i></a>
+			<p><b>&copy Stress Buddy - 2026. All rights reserved.</b></p>
+		</footer>
+	</body>
+</html>
